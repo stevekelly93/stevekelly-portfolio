@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="220" viewBox="0 0 1400 220">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e6da4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="220" fill="url(#bg)"/>
+
+  <!-- Network connection lines -->
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="1">
+    <line x1="80" y1="40" x2="200" y2="110"/>
+    <line x1="200" y1="110" x2="340" y2="60"/>
+    <line x1="340" y1="60" x2="480" y2="140"/>
+    <line x1="480" y1="140" x2="600" y2="80"/>
+    <line x1="600" y1="80" x2="720" y2="160"/>
+    <line x1="720" y1="160" x2="860" y2="50"/>
+    <line x1="860" y1="50" x2="980" y2="130"/>
+    <line x1="980" y1="130" x2="1100" y2="70"/>
+    <line x1="1100" y1="70" x2="1240" y2="150"/>
+    <line x1="1240" y1="150" x2="1360" y2="90"/>
+    <line x1="200" y1="110" x2="480" y2="140"/>
+    <line x1="340" y1="60" x2="600" y2="80"/>
+    <line x1="480" y1="140" x2="720" y2="160"/>
+    <line x1="600" y1="80" x2="860" y2="50"/>
+    <line x1="720" y1="160" x2="980" y2="130"/>
+    <line x1="860" y1="50" x2="1100" y2="70"/>
+    <line x1="980" y1="130" x2="1240" y2="150"/>
+    <line x1="80" y1="40" x2="340" y2="60"/>
+    <line x1="1100" y1="70" x2="1360" y2="90"/>
+    <line x1="80" y1="160" x2="200" y2="110"/>
+    <line x1="80" y1="160" x2="340" y2="180"/>
+    <line x1="340" y1="180" x2="480" y2="140"/>
+    <line x1="340" y1="180" x2="600" y2="170"/>
+    <line x1="600" y1="170" x2="720" y2="160"/>
+    <line x1="600" y1="170" x2="860" y2="190"/>
+    <line x1="860" y1="190" x2="980" y2="130"/>
+    <line x1="860" y1="190" x2="1100" y2="180"/>
+    <line x1="1100" y1="180" x2="1240" y2="150"/>
+    <line x1="1240" y1="150" x2="1360" y2="180"/>
+  </g>
+
+  <!-- Network nodes -->
+  <g fill="#ffffff" fill-opacity="0.18">
+    <circle cx="80" cy="40" r="4"/>
+    <circle cx="200" cy="110" r="5"/>
+    <circle cx="340" cy="60" r="4"/>
+    <circle cx="480" cy="140" r="6"/>
+    <circle cx="600" cy="80" r="4"/>
+    <circle cx="720" cy="160" r="5"/>
+    <circle cx="860" cy="50" r="4"/>
+    <circle cx="980" cy="130" r="6"/>
+    <circle cx="1100" cy="70" r="4"/>
+    <circle cx="1240" cy="150" r="5"/>
+    <circle cx="1360" cy="90" r="4"/>
+    <circle cx="80" cy="160" r="4"/>
+    <circle cx="340" cy="180" r="4"/>
+    <circle cx="600" cy="170" r="4"/>
+    <circle cx="860" cy="190" r="4"/>
+    <circle cx="1100" cy="180" r="4"/>
+    <circle cx="1360" cy="180" r="4"/>
+  </g>
+
+  <!-- Accent nodes (brighter) -->
+  <g fill="#7eb8e8" fill-opacity="0.5">
+    <circle cx="480" cy="140" r="4"/>
+    <circle cx="980" cy="130" r="4"/>
+    <circle cx="200" cy="110" r="3"/>
+    <circle cx="720" cy="160" r="3"/>
+    <circle cx="1240" cy="150" r="3"/>
+  </g>
+</svg>

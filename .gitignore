@@ -1,0 +1,8 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+__pycache__/
+*.pyc
+.vale-styles/
+assets/pdf/backup-v1/

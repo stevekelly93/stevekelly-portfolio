@@ -1,0 +1,9 @@
+title: Steven Kelly — Technical Writing Portfolio
+description: Network engineering professional with 20+ years translating complex infrastructure concepts into clear documentation, partner communications, and stakeholder briefings.
+url: "https://stevekelly93.github.io"
+baseurl: "/stevekelly-portfolio"
+
+author: Steven Kelly
+
+plugins:
+  - jekyll-feed

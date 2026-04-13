@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+{% if page.show_pdf %}
+<!-- Print cover page — hidden on screen, first page of PDF -->
+<div class="print-cover">
+  <div class="print-cover-inner">
+    <div class="print-cover-brand">Steven Kelly &mdash; Technical Writing Portfolio</div>
+    <div class="print-cover-rule"></div>
+    {% if page.doc_type %}<div class="print-cover-type">{{ page.doc_type }}</div>{% endif %}
+    <h1 class="print-cover-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="print-cover-desc">{{ page.description }}</p>{% endif %}
+    <div class="print-cover-meta">
+      {% if page.audience %}<div><span>Audience</span> {{ page.audience }}</div>{% endif %}
+      {% if page.doc_date %}<div><span>Date</span> {{ page.doc_date }}</div>{% endif %}
+      {% if page.doc_status %}<div><span>Status</span> {{ page.doc_status }}</div>{% endif %}
+      {% if page.series_page and page.series_total %}<div><span>Series</span> Document {{ page.series_page }} of {{ page.series_total }}</div>{% endif %}
+    </div>
+    <div class="print-cover-footer">Technical Writing Portfolio &mdash; Organization names and identifying details have been generalized to protect confidentiality.</div>
+  </div>
+</div>
+{% endif %}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+
+    {% if page.doc_type or page.audience or page.doc_date %}
+    <div class="doc-meta">
+      {% if page.doc_type %}
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Document Type</span>
+        <span class="doc-meta-value">{{ page.doc_type }}</span>
+      </div>
+      {% endif %}
+      {% if page.audience %}
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Audience</span>
+        <span class="doc-meta-value">{{ page.audience }}</span>
+      </div>
+      {% endif %}
+      {% if page.doc_date %}
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Date</span>
+        <span class="doc-meta-value">{{ page.doc_date }}</span>
+      </div>
+      {% endif %}
+      {% if page.doc_status %}
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Status</span>
+        <span class="doc-meta-value">{{ page.doc_status }}</span>
+      </div>
+      {% endif %}
+      {% if page.series_page and page.series_total %}
+      <div class="doc-meta-item">
+        <span class="doc-meta-label">Series</span>
+        <span class="doc-meta-value">Document {{ page.series_page }} of {{ page.series_total }}</span>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if page.show_pdf %}
+    <div class="pdf-action no-print">
+      <a class="pdf-btn" href="{{ '/assets/pdf/' | append: page.name | remove: '.md' | append: '.pdf' | relative_url }}" download>&#8681; Download PDF</a>
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+  {% unless page.hide_nav %}
+  <div class="post-nav no-print">
+    <a href="{{ '/' | relative_url }}">&larr; Back to Portfolio</a>
+  </div>
+  {% endunless %}
+</article>

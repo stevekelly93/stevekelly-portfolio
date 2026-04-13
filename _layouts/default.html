@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral', themeVariables: { primaryColor: '#2e6da4', edgeLabelBackground: '#f4f7fb' }});</script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">Steven Kelly</a>
+      <p class="site-subtitle">Technical Writing Portfolio</p>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <div class="content-area">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Steven Kelly &mdash; Technical Writing Portfolio &mdash; Organization names and identifying details in all samples have been generalized to protect confidentiality.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

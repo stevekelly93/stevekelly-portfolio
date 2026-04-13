@@ -1,0 +1,628 @@
+/* ─── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #2d2d2d;
+  background: #f9fafc;
+}
+
+a { color: #2e6da4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ─── Header ───────────────────────────────────────────────── */
+.site-header {
+  background-color: #1a3a5c;
+  background-image:
+    url('../images/header-bg.svg'),
+    linear-gradient(135deg, #1a3a5c 0%, #2e6da4 100%);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 48px 40px 44px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  display: block;
+  text-decoration: none;
+}
+
+.site-title:hover { text-decoration: none; opacity: 0.9; }
+
+.site-subtitle {
+  font-size: 15px;
+  color: #E3ECF5;
+  margin-top: 6px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ─── Main content ─────────────────────────────────────────── */
+.page-wrap {
+  min-height: calc(100vh - 280px);
+  padding: 48px 40px;
+}
+
+.content-area {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  padding: 48px 56px;
+}
+
+/* ─── Typography ───────────────────────────────────────────── */
+h1 { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+h2 { font-size: 20px; font-weight: 600; color: #1a2a3a; margin: 2.2em 0 0.6em; padding-bottom: 0.3em; border-bottom: 2px solid #e8edf2; }
+h3 { font-size: 17px; font-weight: 600; color: #2e6da4; margin: 1.8em 0 0.4em; }
+h4 { font-size: 15px; font-weight: 600; color: #333; margin: 1.4em 0 0.3em; }
+
+p { margin: 0.8em 0; }
+ul, ol { margin: 0.8em 0 0.8em 1.6em; }
+li { margin: 0.3em 0; }
+
+strong { font-weight: 600; }
+
+hr { border: none; border-top: 1px solid #e8edf2; margin: 2em 0; }
+
+/* ─── Homepage sample cards ────────────────────────────────── */
+.content-area h3 a {
+  color: #2e6da4;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.content-area h3 a:hover { text-decoration: underline; }
+
+/* ─── Tables ───────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 15px;
+  background: #fff;
+}
+
+th {
+  background: #f0f4f9;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid #d0dae6;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #445;
+}
+
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #eaeff4;
+  vertical-align: top;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f7f9fc; }
+
+/* ─── Code & Pre ───────────────────────────────────────────── */
+pre {
+  background: #f4f6f9;
+  border: 1px solid #dde3ea;
+  border-left: 4px solid #2e6da4;
+  border-radius: 4px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 1.4em 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+code {
+  font-size: 13.5px;
+  background: #f0f4f9;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+pre code { background: none; padding: 0; font-size: inherit; }
+
+/* ─── Blockquotes ──────────────────────────────────────────── */
+blockquote {
+  border-left: 4px solid #2e6da4;
+  margin: 1.4em 0;
+  padding: 12px 20px;
+  background: #f4f7fb;
+  border-radius: 0 4px 4px 0;
+  color: #445;
+  font-style: normal;
+}
+
+blockquote p { margin: 0; }
+
+/* ─── Table of Contents ────────────────────────────────────── */
+.toc {
+  background: #f4f7fb;
+  border: 1px solid #d0dae6;
+  border-left: 4px solid #2e6da4;
+  border-radius: 0 4px 4px 0;
+  padding: 14px 22px 16px;
+  margin: 0.4em 0 2em;
+  display: inline-block;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+.toc-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7a8fa6;
+  margin: 0 0 8px;
+}
+
+.toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc li {
+  margin: 0.28em 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.toc a {
+  color: #2e6da4;
+  text-decoration: none;
+}
+
+.toc a:hover { text-decoration: underline; }
+
+.toc ul ul {
+  margin: 0.25em 0 0.1em 1.1em;
+  padding: 0;
+}
+
+.toc li li {
+  font-size: 12.5px;
+  margin: 0.18em 0;
+  color: #556;
+}
+
+.toc li li a {
+  color: #4a7aaa;
+}
+
+/* ─── Back to top link ─────────────────────────────────────── */
+.back-to-top {
+  text-align: right;
+  margin-top: 0.6em;
+}
+
+.back-to-top a {
+  font-size: 12px;
+  color: #9aafc2;
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  color: #2e6da4;
+  text-decoration: none;
+}
+
+/* ─── Post / Sample page ───────────────────────────────────── */
+.post-header { margin-bottom: 2em; padding-bottom: 1.2em; border-bottom: 2px solid #e8edf2; }
+.post-title { font-size: 26px; font-weight: 700; color: #1a2a3a; line-height: 1.3; }
+.post-description { font-size: 15px; color: #667; margin-top: 8px; }
+
+.post-nav {
+  margin-top: 3em;
+  padding-top: 1.4em;
+  border-top: 1px solid #e8edf2;
+  font-size: 14px;
+}
+
+.post-nav a { color: #2e6da4; font-weight: 500; }
+
+/* ─── Mermaid diagrams ─────────────────────────────────────── */
+.mermaid {
+  background: #f8fafc;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 1.6em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* ─── Footer ───────────────────────────────────────────────── */
+.site-footer {
+  background: #1a2a3a;
+  padding: 20px 40px;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+
+/* ─── Document metadata card ───────────────────────────────── */
+.doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: #f4f7fb;
+  border: 1px solid #d0dae6;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.2em 0 0.6em;
+  font-size: 14px;
+}
+
+.doc-meta-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 18px;
+  border-right: 1px solid #d0dae6;
+  min-width: 160px;
+  flex: 1;
+}
+
+.doc-meta-item:last-child { border-right: none; }
+
+.doc-meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7a8fa6;
+  margin-bottom: 3px;
+}
+
+.doc-meta-value {
+  font-size: 13.5px;
+  color: #1a2a3a;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ─── PDF download button ──────────────────────────────────── */
+.pdf-action {
+  margin-top: 1.2em;
+}
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #2e6da4;
+  color: #fff !important;
+  font-size: 13.5px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.2px;
+  text-decoration: none !important;
+}
+
+.pdf-btn:hover { background: #245a8a; text-decoration: none !important; }
+
+
+/* ─── Print cover page (screen: hidden) ────────────────────── */
+.print-cover { display: none !important; }
+
+/* ─── Print / PDF styles ───────────────────────────────────── */
+@media print {
+  /* Applied to every page — continuation pages included.
+     Pass 1 (cover) overrides this via injected style. */
+  @page {
+    margin-top: 2.2cm;
+    margin-bottom: 1.0cm;
+    margin-left: 1.8cm;
+    margin-right: 1.8cm;
+  }
+  /* First content page gets slightly less top margin so
+     the document title doesn't sit too far from the header. */
+  @page :first {
+    margin-top: 2.0cm;
+  }
+
+  .no-print { display: none !important; }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+    color: #111;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .site-header,
+  .site-footer,
+  .post-nav,
+  .pdf-btn { display: none !important; }
+
+  .page-wrap { padding: 0; min-height: unset; background: #fff; }
+
+  .content-area {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: 100%;
+    background: #fff;
+  }
+
+  /* ── Cover page — full bleed, no page margins ── */
+  .print-cover {
+    display: block !important;
+    width: 100%;
+    height: 100vh;
+    page-break-after: always;
+    break-after: page;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-cover-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5cm 3.2cm;
+    height: 100%;
+    background: linear-gradient(135deg, #1a3a5c 0%, #2e6da4 100%);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color: #fff;
+  }
+
+  .print-cover-brand {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DDE8F3;
+    margin-bottom: 1cm;
+  }
+
+  .print-cover-rule {
+    width: 48pt;
+    height: 3pt;
+    background: #6F95B8;
+    margin-bottom: 0.6cm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-cover-type {
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #DDE8F3;
+    margin-bottom: 0.35cm;
+  }
+
+  .print-cover-title {
+    font-size: 26pt;
+    font-weight: 700;
+    color: #F4F7FB;
+    line-height: 1.25;
+    margin: 0 0 0.5cm;
+    border: none;
+    padding: 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .print-cover-desc {
+    font-size: 11.5pt;
+    font-weight: 500;
+    color: #E3ECF5;
+    line-height: 1.65;
+    max-width: 80%;
+    margin-bottom: 1cm;
+  }
+
+  .print-cover-meta {
+    display: block;
+    font-size: 10pt;
+    color: #D6E2F0;
+    border-top: 0.5pt solid #6F95B8;
+    padding-top: 0.5cm;
+    margin-bottom: 0.8cm;
+    line-height: 1.65;
+  }
+
+  .print-cover-meta div {
+    display: flex;
+    gap: 14pt;
+    margin-bottom: 5pt;
+  }
+
+  .print-cover-meta span {
+    font-weight: 700;
+    color: #DDE8F3;
+    min-width: 70pt;
+    text-transform: uppercase;
+    font-size: 7.5pt;
+    letter-spacing: 0.05em;
+    padding-top: 1.5pt;
+  }
+
+  .print-cover-footer {
+    font-size: 8.5pt;
+    color: #C9D7E6;
+    margin-top: 1.5cm;
+  }
+
+  /* ── Content pages — margins come from Playwright's page.pdf() call ── */
+  .post {
+    padding: 0;
+  }
+
+  .post-header {
+    margin-bottom: 18pt;
+    padding-bottom: 10pt;
+    border-bottom: 1.5pt solid #dde3ea;
+  }
+
+  .post-title { font-size: 18pt; color: #1a2a3a; margin-bottom: 4pt; }
+  .post-description { font-size: 10.5pt; color: #555; }
+
+  .doc-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 0.5pt solid #ccc;
+    background: #f4f7fb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+    margin-bottom: 14pt;
+  }
+
+  .doc-meta-item {
+    padding: 8pt 12pt;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .doc-meta-item { border-right: 0.5pt solid #ccc; }
+  .doc-meta-label { font-size: 7.5pt; color: #7a8fa6; }
+  .doc-meta-value { font-size: 10pt; }
+
+  /* ── Page break control ── */
+  h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h2 + p, h2 + ul, h2 + ol, h2 + table, h2 + pre, h2 + blockquote, h2 + div,
+  h3 + p, h3 + ul, h3 + ol, h3 + table, h3 + pre, h3 + blockquote, h3 + div,
+  h4 + p, h4 + ul, h4 + ol, h4 + table, h4 + pre, h4 + blockquote, h4 + div {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  table, blockquote, pre, .doc-meta {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  ul, ol {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ── Headings ── */
+  h2 { font-size: 13pt; border-bottom: 1pt solid #ccc; margin-top: 20pt; color: #1a2a3a; }
+  h3 { font-size: 11pt; color: #2e6da4; margin-top: 14pt; }
+  h4 { font-size: 10.5pt; }
+  p, li { font-size: 11pt; line-height: 1.65; }
+
+  pre {
+    border: 0.5pt solid #ccc;
+    border-left: 3pt solid #2e6da4;
+    font-size: 8.5pt;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 10pt 12pt;
+    background: #f6f8fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  table { font-size: 9.5pt; }
+  th {
+    background: #edf1f7 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 8.5pt;
+  }
+  td { padding: 7pt 12pt; }
+
+  blockquote {
+    border-left: 3pt solid #2e6da4;
+    background: #f4f7fb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 8pt 14pt;
+    font-size: 10.5pt;
+  }
+
+  a { color: #1a2a3a; text-decoration: none; }
+  .mermaid { display: none !important; }
+  hr { border-top: 0.5pt solid #ddd; }
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .site-header { padding: 32px 20px; }
+  .page-wrap { padding: 24px 16px; }
+  .content-area { padding: 28px 24px; }
+  .site-title { font-size: 24px; }
+  .doc-meta { flex-direction: column; }
+  .doc-meta-item { border-right: none; border-bottom: 1px solid #d0dae6; }
+  .doc-meta-item:last-child { border-bottom: none; }
+}
+
+/* ─── Print overrides — must come last to win over responsive rules ─ */
+@media print {
+  .toc {
+    background: #f4f7fb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+    display: block;
+  }
+  .toc a {
+    color: #1a2a3a !important;
+    text-decoration: none !important;
+  }
+  .doc-meta {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+  .doc-meta-item {
+    border-right: 0.5pt solid #ccc !important;
+    border-bottom: none !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+  .doc-meta-item:last-child {
+    border-right: none !important;
+  }
+}
