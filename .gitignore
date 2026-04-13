@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 .vale-styles/
 assets/pdf/backup-v1/
+QUICKSTART.md
+mcp_server.py
+generate-pdfs.py
+generate-pdfs.ps1
